@@ -23,6 +23,6 @@ for page in range(1, 5):
         columns = row.find_all("td")
         if len(columns) <= 1: # 의미 없는 데이터는 skip
             continue
-        data = [column.get_text().strip() for column in columns]
+        data = [column.get_text().strip() for column in columns]   #strip 불필요 공백 문자열제거
         #print(data)
         writer.writerow(data)
